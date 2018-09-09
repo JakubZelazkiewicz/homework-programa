@@ -15,6 +15,9 @@ public class SignIn {
     @FindBy(partialLinkText = "Wyloguj")
     public WebElement wylogujButton;
 
+    @FindBy(css = ".alert")
+    public WebElement alertText;
+
     public void signInUser(String userEmail, String userPass1) {
         userEmailField.sendKeys ( userEmail );
         passField.sendKeys ( userPass1 );
