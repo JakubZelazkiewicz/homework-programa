@@ -17,6 +17,10 @@ public class Users {
     @FindBy(xpath = "//table/tbody/tr/td[1]")
     private WebElement filterResult;
 
+    @FindBy(xpath = "//tbody/tr/td[1]")
+    public WebElement userInTest;
+
+
     public void filterByEmail(String email) {
         emailField.sendKeys ( email );
         firstNameField.click ();

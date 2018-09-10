@@ -13,6 +13,7 @@ import pages.Users;
 
 import java.util.concurrent.TimeUnit;
 
+import static com.thoughtworks.selenium.SeleneseTestBase.assertEquals;
 import static com.thoughtworks.selenium.SeleneseTestBase.assertTrue;
 
 
@@ -99,22 +100,13 @@ public class ProgramaTests {
         assertTrue ( homePage.usersButton.isDisplayed () );
         homePage.clickOnUsersButton ();
         users.filterByEmail ( email );
+        assertEquals ( email, users.userInTest.getText () );
+
     }
 
-
-
-
-
-
-
-
-
-
-    /*@After
-    public void tearDown (){
-    driver.close ();
+    @After
+    public void tearDown() {
+        driver.close ();
     }
-    */
-
 
 }

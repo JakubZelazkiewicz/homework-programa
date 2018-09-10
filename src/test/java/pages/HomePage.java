@@ -9,10 +9,10 @@ public class HomePage {
     private WebElement signInButton;
 
 
-    @FindBy(xpath = "/html/body/div[1]/div/div[2]/ul[2]/li[2]")
+    @FindBy(xpath = "//*[@id=\"navbar-top-collapse\"]/ul[2]/li[2]/a")
     private WebElement signUpButton;
 
-    @FindBy(xpath = "/html/body/div[1]/div/div[2]/ul[1]/li[2]/a")
+    @FindBy(xpath = "//*[@id=\"navbar-top-collapse\"]/ul[1]/li[2]")
     public WebElement usersButton;
 
     public void clickOnSignInButton() {
